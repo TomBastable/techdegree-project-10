@@ -146,5 +146,11 @@ class MasterViewController: UITableViewController, UISearchBarDelegate {
         }
         
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        self.searchBar.resignFirstResponder()
+        
+    }
 
 }

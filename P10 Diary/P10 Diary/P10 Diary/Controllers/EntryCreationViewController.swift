@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import Photos
 
-class EntryCreationViewController: UIViewController, TatsiPickerViewControllerDelegate, CLLocationManagerDelegate {
+class EntryCreationViewController: UIViewController, TatsiPickerViewControllerDelegate, CLLocationManagerDelegate, UITextFieldDelegate {
     
     //MARK: - Properties
     
@@ -154,6 +154,11 @@ class EntryCreationViewController: UIViewController, TatsiPickerViewControllerDe
         longitude = "\(locValue.longitude)"
         latitude = "\(locValue.latitude)"
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }
